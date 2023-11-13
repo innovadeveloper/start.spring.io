@@ -34,9 +34,13 @@ spring:
     resources:
       cache:
         use-last-modified: false
-
 initializr:
   env:
+    maven:
+      parent:
+        groupId: com.abexa
+        artifactId: calypso
+        includeSpringBootBom : true
     boms:
       codecentric-spring-boot-admin:
         groupId: de.codecentric
@@ -1487,6 +1491,7 @@ initializr:
               href: https://googlecloudplatform.github.io/spring-cloud-gcp/reference/html/index.html#cloud-storage
             - rel: guide
               href: https://github.com/GoogleCloudPlatform/spring-cloud-gcp/tree/main/spring-cloud-gcp-samples/spring-cloud-gcp-storage-resource-sample
+
   types:
     - name: Gradle - Groovy
       id: gradle-project
